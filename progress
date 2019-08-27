@@ -1,0 +1,17 @@
+Primeiro dia, brigando para rodar o cmake
+	- instalado o msys2 (pelo msys consigo baixar o compilador, o make e o cmake)
+		- a partir disto eu consigo buildar um projeto
+	- https://gist.github.com/digitaljhelms/4287848 (sobre branching convention)
+	- https://github.com/onqtam/doctest (biblioteca interessante para testes em C++)
+		- considerar tbm como exemplo de projeto
+	- https://lgtm.com/help/lgtm/getting-started (ferramente para code review automatizado)
+	- https://gitlab.com/CLIUtils/modern-cmake/tree/master/examples/extended-project (projeto template de cmake)
+	- https://cliutils.gitlab.io/modern-cmake/ (material sobre cmake)
+	- https://nvie.com/posts/a-successful-git-branching-model/ (modelo do gitflow)
+	
+Segundo dia, back to work
+	- switching things up, fazendo tutorial de opengl
+	- https://learnopengl.com/Getting-started/OpenGL (tutorial de opengl)
+	- to build:
+		- cmake -G"MSYS Makefiles" -S . -B build
+		- cmake --build build
