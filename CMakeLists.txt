@@ -17,7 +17,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
     # Setup for clang-tidy on build
-    set(CLANG_TIDY_OPTS "-checks='cert-*,cppcoreguidelines-*,google-*,llvm-*,misc-*,modernize-*,performance-*,readility-*,")
+    set(CLANG_TIDY_OPTS "-checks='cert-*,cppcoreguidelines-*,google-*,llvm-*,misc-*,modernize-*,performance-*,readility-*,-cppcoreguidelines-pro-type-reinterpret-cast")
     find_program(
                 CLANG_TIDY_EXE
                 NAMES "clang-tidy"
