@@ -17,7 +17,6 @@ if(CLANG_FORMAT_EXE)
     add_custom_target(
             clangformat
             COMMAND ${CLANG_FORMAT_EXE}
-            -style=LLVM
             -i
             ${ALL_SOURCE_FILES}
     )
