@@ -1,4 +1,4 @@
-embedcpp_generate(GENERATED_FILES INC_PATH shaders/vertex.glsl)
+embedcpp_generate(GENERATED_FILES INC_PATH shaders/vertex.glsl shaders/fragment.glsl)
 
 # Note that headers are optional, and do not affect add_library, but they will not
 # show up in IDEs unless they are listed in add_library.
@@ -7,7 +7,8 @@ embedcpp_generate(GENERATED_FILES INC_PATH shaders/vertex.glsl)
 # file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${ModernCMakeExample_SOURCE_DIR}/include/modern/*.hpp")
 set(HEADER_LIST "${troublemaker_SOURCE_DIR}/include/glad/glad.h"
                 "${troublemaker_SOURCE_DIR}/include/KHR/khrplatform.h"
-                "${troublemaker_SOURCE_DIR}/include/troublemaker/window_context.hpp")
+                "${troublemaker_SOURCE_DIR}/include/troublemaker/window_context.hpp"
+                "${troublemaker_SOURCE_DIR}/include/troublemaker/graphics_pipeline.hpp")
 
 set(SOURCE_LIST "glad.c"
                 "window_context.cpp")
