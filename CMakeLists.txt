@@ -23,7 +23,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
                 DOC "Path to clang-tidy executable"
     )
     if(CLANG_TIDY_EXE)
-        set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_EXE}")
+        set(DO_CLANG_TIDY "${CLANG_TIDY_EXE}")
     endif()
 
     include(cmake/clang-format.cmake)
@@ -32,14 +32,18 @@ endif()
 # FetchContent downloads during the configure step
 include(FetchContent)
 
-# library for windows and user inputs
 FetchContent_Declare(
                     glfw
                     GIT_REPOSITORY https://github.com/glfw/glfw.git
                     GIT_TAG 3.3
 )
-# adds glfw
+FetchContent_Declare(
+                    embedcpp
+                    GIT_REPOSITORY https://github.com/Pinguinha/embedcpp.git
+                    GIT_TAG 0.2
+)
 FetchContent_MakeAvailable(glfw)
+FetchContent_MakeAvailable(embedcpp)
 
 # The library code is here
 add_subdirectory(src)
